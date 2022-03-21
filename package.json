@@ -1,0 +1,22 @@
+{
+  "name": "martingraham-dot-dev",
+  "version": "1.0.0",
+  "description": "Source code for martingraham.dev",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/martin-anderson-graham/martingraham-dot-dev.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/martin-anderson-graham/martingraham-dot-dev/issues"
+  },
+  "homepage": "https://github.com/martin-anderson-graham/martingraham-dot-dev#readme",
+  "dependencies": {
+    "pug": "^3.0.2"
+  }
+}
