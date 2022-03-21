@@ -8,6 +8,6 @@ app.get("/", (req, res) => {
   res.send("Hello world");
 })
 
-app.listen(PORT, '45.79.16.196',() => {
+app.listen(PORT,() => {
   console.log(`Listening on port ${PORT}...`);
 })
