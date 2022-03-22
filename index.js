@@ -4,7 +4,7 @@ const PORT = 31234;
 const SERVER = HTTP.createServer( (req, res) => {
   res.statusCode = 200;
   res.setHeader('Content-Type', 'text/plain');
-  res.write("Hello Karen");
+  res.write("Hello Karen!");
   res.end();
 });
 
