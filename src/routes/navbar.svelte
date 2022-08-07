@@ -1,5 +1,14 @@
 <ul>
   <li class="container">
+		<a target="_blank" href="/">
+			<img id="headshot" class="image" src="/images/headshot.jpg" alt="Hi, I'm Martin Graham" />
+			<div class="overlay">
+				<div class="text">home</div>
+			</div>
+		</a>
+	</li>
+
+  <li class="container">
 		<a target="_blank" href="google.com">
 			<img class="image" src="/images/projects.png" alt="My Projects" />
 			<div class="overlay">
@@ -102,4 +111,8 @@
 		transform: translate(-50%, -50%);
 		text-align: center;
 	}
+
+  #headshot {
+    border-radius: 10%;
+  }
 </style>
