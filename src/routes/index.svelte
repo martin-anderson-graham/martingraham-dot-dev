@@ -12,6 +12,8 @@
   :global(body) {
     padding: 0;
     margin: 0;
+    font-family: 'Cabin', sans-serif;
+
   }
 
   #navbar {
