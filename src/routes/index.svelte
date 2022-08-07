@@ -4,23 +4,27 @@
 
 <style>
   :global(:root) {
-    --color-1: #e4fde1;
-    --color-2: #8acb88;
-    --color-3: #648381;
-    --color-4: #575761;
-    --color-5: #ffbf46;
+    --color-1: #002642;
+    --color-2: #840032;
+    --color-3: #E59500;
+    --color-4: #E5DADA;
+    --color-5: #02040F;
 
 
-    --nav-bg-color: var(--color-3);
     --sidebar-width: 130px;
-    --title-bg-color: var(--color-5);
-    --footer-bg-color: var(--color-4);
+    --nav-bg-color: var(--color-1);
+    --title-bg-color: var(--color-2);
+    --title-text-color: var(--color-4);
+    --body-bg-color: var(--color-4);
+    --footer-bg-color: var(--color-5);
+    --footer-text-color: var(--color-3);
   }
 
   :global(body) {
     padding: 0;
     margin: 0;
     font-family: 'Cabin', sans-serif;
+    background-color: var(--body-bg-color);
 
   }
 
@@ -36,7 +40,7 @@
   #title {
     margin-left: var(--sidebar-width);
     background-color: var(--title-bg-color);
-    color: var(--color-4);
+    color: var(--title-text-color);
     width: 100%;
     padding-top: 1%;
     padding-bottom: .5%;
@@ -48,9 +52,13 @@
     bottom: 0px;
     left: var(--sidebar-width);
     background-color: var(--footer-bg-color);
+    color: var(--footer-text-color);
     width: 100%;
     padding: 2%
-    
+  }
+
+  #footer > p > a {
+    color: var(--footer-text-color)
   }
 </style>
 
@@ -62,5 +70,7 @@
 </div>
 
 <div id="footer">
-    Icons courtesy of <a href="icons8.com">icons8</a>
+    <p>
+      Icons courtesy of <a href="icons8.com">icons8</a>
+    </p>
 </div>
