@@ -4,9 +4,17 @@
 
 <style>
   :global(:root) {
-    --nav-bg-color: blue;
+    --color-1: #e4fde1;
+    --color-2: #8acb88;
+    --color-3: #648381;
+    --color-4: #575761;
+    --color-5: #ffbf46;
+
+
+    --nav-bg-color: var(--color-3);
     --sidebar-width: 130px;
-    --title-bg-color: rgb(241, 128, 128);
+    --title-bg-color: var(--color-5);
+    --footer-bg-color: var(--color-4);
   }
 
   :global(body) {
@@ -28,6 +36,7 @@
   #title {
     margin-left: var(--sidebar-width);
     background-color: var(--title-bg-color);
+    color: var(--color-4);
     width: 100%;
     padding-top: 1%;
     padding-bottom: .5%;
@@ -38,15 +47,15 @@
     position: absolute;
     bottom: 0px;
     left: var(--sidebar-width);
-    background-color: gray;
+    background-color: var(--footer-bg-color);
     width: 100%;
-    padding: 5%
+    padding: 2%
     
   }
 </style>
 
 <div id="title">
-  <h1>Welcome to martingraham.dev</h1>
+  <h1>martingraham.dev</h1>
 </div>
 <div id="navbar">
   <Navbar />
