@@ -8,9 +8,11 @@ This site is:
 
 
 ## Notes:
-  - after pulling from the repo run
+  - `npm run deploy` will:
     ```bash
+    git pull
     npm run build
+    pm2 restart all
     ```
   - nginx redirects port 443 to the running node app (`build/index.js`) running on port 3000
 
