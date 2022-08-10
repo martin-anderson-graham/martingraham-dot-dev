@@ -69,6 +69,10 @@
   <Navbar />
 </div>
 
+<div>
+  <p>Content</p>
+</div>
+
 <div id="footer">
     <p>
       Icons courtesy of <a href="icons8.com">icons8</a>
