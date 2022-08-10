@@ -26,7 +26,5 @@ jobs:
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
       - name: Run npm run deploy
         run: |  
-          ssh staging 'cd /home/$SSH_USER/martingraham-dot-dev'
+          ssh staging 'cd martingraham-dot-dev'
           ssh staging 'npm run deploy'
-        env:
-          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
