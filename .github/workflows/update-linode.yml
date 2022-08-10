@@ -1,4 +1,4 @@
-name: Update Linode Action
+name: Update Linode VPS Action
 on: 
   push:
     branches:
@@ -6,5 +6,27 @@ on:
 jobs:
   Push-to-linode:
     runs-on: ubuntu-latest
-    steps: 
-        - run: echo "The job was triggered by a  ${{ github.event_name }} event."
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master
+    steps:
+      - name: Configure SSH
+        run: |
+          mkdir -p ~/.ssh/
+          echo "$SSH_KEY" > ~/.ssh/staging.key
+          chmod 600 ~/.ssh/staging.key
+          cat >>~/.ssh/config <<END
+          Host staging
+            HostName $SSH_HOST
+            User $SSH_USER
+            IdentityFile ~/.ssh/staging.key
+            StrictHostKeyChecking no
+          END
+        env:
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+          SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
+          SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
+
+      - name: Stop the server
+        run: ssh staging 'cd ~/${{SSH_USER}}/martingraham-dot-dev'
+        run: ssh staging 'npm run deploy'
+        env:
+          SSH_USER: ${{ secrets.STAGING_SSH_USER }}
