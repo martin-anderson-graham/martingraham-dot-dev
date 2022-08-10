@@ -26,7 +26,8 @@ jobs:
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
 
       - name: Stop the server
-        run: ssh staging 'cd ~/${{SSH_USER}}/martingraham-dot-dev'
-        run: ssh staging 'npm run deploy'
+        run: |  
+          ssh staging 'cd ~/${{SSH_USER}}/martingraham-dot-dev'
+          ssh staging 'npm run deploy'
         env:
           SSH_USER: ${{ secrets.STAGING_SSH_USER }}
