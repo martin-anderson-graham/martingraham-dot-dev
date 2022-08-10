@@ -25,9 +25,11 @@ jobs:
           SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
 
-      - name: Stop the server
-        run: |  
-          ssh staging 'cd ~/${{SSH_USER}}/martingraham-dot-dev'
-          ssh staging 'npm run deploy'
+      - name: Set env
+        run: echo "SSH_USER=$SSH_USER" >> $GITHUB_ENV
         env:
           SSH_USER: ${{ secrets.STAGING_SSH_USER }}
+      - name: Run npm run deploy
+        run: |  
+          ssh staging 'cd ~/$SSH_USER/martingraham-dot-dev'
+          ssh staging 'npm run deploy'
