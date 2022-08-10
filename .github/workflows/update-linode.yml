@@ -4,6 +4,7 @@ on:
     branches:
       - 'main'
 jobs:
-  runs-on: ubuntu-latest
-  steps: 
-      - run: echo "The job was triggered by a  ${{ github.event_name }} event."
+  Push-to-linode:
+    runs-on: ubuntu-latest
+    steps: 
+        - run: echo "The job was triggered by a  ${{ github.event_name }} event."
