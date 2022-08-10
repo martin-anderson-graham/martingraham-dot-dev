@@ -19,13 +19,12 @@ jobs:
             User $SSH_USER
             IdentityFile ~/.ssh/staging.key
             StrictHostKeyChecking no
+            RemoteCommand cd /home/$SSH_USER/martingraham.dev; $SHELL -il
           END
         env:
           SSH_USER: ${{ secrets.STAGING_SSH_USER }}
           SSH_KEY: ${{ secrets.STAGING_SSH_KEY }}
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
       - name: Run npm run deploy
-        run: |  
-          ssh staging 'pwd'
-          ssh staging 'cd martingraham-dot-dev'
+        run: |
           ssh staging 'npm run deploy'
