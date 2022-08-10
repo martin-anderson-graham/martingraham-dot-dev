@@ -26,5 +26,6 @@ jobs:
           SSH_HOST: ${{ secrets.STAGING_SSH_HOST }}
       - name: Run npm run deploy
         run: |  
+          ssh staging 'pwd'
           ssh staging 'cd martingraham-dot-dev'
           ssh staging 'npm run deploy'
