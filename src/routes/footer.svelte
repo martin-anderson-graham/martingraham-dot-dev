@@ -8,6 +8,6 @@
     text-align: center;
     font-weight: 500;
     margin-top: 15%;
-    font-size: var(--foter-font-size);
+    font-size: var(--footer-font-size);
   }
 </style>
