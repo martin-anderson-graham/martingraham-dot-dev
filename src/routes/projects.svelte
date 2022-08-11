@@ -1,6 +1,5 @@
 <script>
 	import Navbar from './navbar.svelte';
-	import About from './about.svelte';
 	import Footer from './footer.svelte';
 </script>
 
@@ -28,14 +27,14 @@
 <style>
 	#project-header {
 		color: var(--text-emphasis-color);
-		font-size: 3vw;
+		font-size: var(--project-header-font-size);
 	}
 
 	h2 {
-		font-size: 2vw;
+		font-size: var(--project-h2-font-size);
 	}
 
   p {
-    font-size: 1.5vw;
+    font-size: var(--project-p-font-size);
   }
 </style>

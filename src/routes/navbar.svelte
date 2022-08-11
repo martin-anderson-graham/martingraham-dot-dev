@@ -20,17 +20,17 @@
 	}
   
 	#nav-links-container {
-    gap: 1.5vw;
+    gap: var(--nav-gaps);
     flex-wrap: wrap;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		font-size: 1.5vw;
+		font-size: var(--nav-font-size);
     max-width: 50%;
 	}
 
 	#nav-name {
-		font-size: 2vw;
+		font-size: var(--nav-font-size-name);
     max-width: 40%;
 	}
 </style>

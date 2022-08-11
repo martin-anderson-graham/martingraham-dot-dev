@@ -8,13 +8,13 @@
 <style>
 
 	#about-title {
-		font-size: 4.5vw;
+		font-size: var(--about-title-font-size);
 		color: var(--text-emphasis-color);
     font-weight: 700;
 	}
 
   #about-content {
-    font-size: 2vw;
+    font-size: var(--about-content-font-size);
     font-weight: 500;
   }
 </style>
