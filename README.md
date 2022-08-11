@@ -5,6 +5,7 @@ This site is:
   - running on an Ubuntu 20.04 [Linode](linode.com) VPS
   - using `nginx` and `pm2`
   - SSL certificate generated using [Let's Encrypt](letsencrypt.org)
+  - Automatic deployment to the VPS using Github Actions (pushing to main triggers an ssh session which runs `npm run deploy`)
 
 
 ## Notes:
