@@ -20,17 +20,17 @@
 	}
   
 	#nav-links-container {
-    gap: 20px;
+    gap: 1.5vw;
     flex-wrap: wrap;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
-		font-size: 25px;
+		font-size: 1.5vw;
     max-width: 50%;
 	}
 
 	#nav-name {
-		font-size: 30px;
+		font-size: 2vw;
     max-width: 40%;
 	}
 </style>
