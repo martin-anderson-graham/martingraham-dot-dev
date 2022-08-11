@@ -18,16 +18,19 @@
 		justify-content: space-between;
 		color: var(--text-emphasis-color);
 	}
-
+  
 	#nav-links-container {
-		gap: 20px;
+    gap: 20px;
+    flex-wrap: wrap;
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		font-size: 25px;
+    max-width: 50%;
 	}
 
 	#nav-name {
 		font-size: 30px;
+    max-width: 40%;
 	}
 </style>
