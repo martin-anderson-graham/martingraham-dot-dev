@@ -2571,7 +2571,10 @@ input, select, textarea {
         flex: 3;
         min-width: 50%;
     }
-    .article-content > .article-button {
+    .article-link {
+        border-bottom: none;
+    }
+    .article-content .article-button {
         padding: 1em;
         margin: auto;
         width: 50%;
